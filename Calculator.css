@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #ededed;
+}
+
+.background-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    width: 50vw;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+#result {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 35px;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    width: 100%;
+    font-size: 30px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #272727;
+    color: white;
+    border-radius: 6px;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+
+button:nth-child(4n) {
+    background-color: #ff9500;
+}
+
+button:last-child {
+    background-color: #34a853;
+    color: white;
+}
+
+.dark {
+    background-color: #292c35;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.borderChange {
+    border: 2px solid white;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+.theme-change {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width:768px) {
+    #calculator {
+        width: 75vw;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="theme-change">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+    <div class="background-container">
+        <div id="calculator">
+            <input type="text" id="result" readonly>
+            <div class="keypad">
+                <button id="changeColor1" onclick="clearResult()">C</button>
+                <button id="changeColor2" onclick="appendToResult('(')">(</button>
+                <button id="changeColor3" onclick="appendToResult(')')">)</button>
+                <button onclick="backspace()" style="background-color:red">←</button>
+
+                <button id="changeColor4" onclick="appendToResult('Math.sin(')">sin</button>
+                <button id="changeColor5" onclick="appendToResult('Math.cos(')">cos</button>
+                <button id="changeColor6" onclick="appendToResult('Math.tan(')">tan</button>
+                <button onclick="calculatePercentage()">%</button>
+
+                <button id="changeColor7" onclick="appendToResult('Math.exp(')">exp</button>
+                <button id="changeColor8" onclick="appendToResult('Math.log10(')">log</button>
+                <button id="changeColor9" onclick="appendToResult('Math.cbrt(')">∛</button>
+                <button onclick="appendToResult('/')">/</button>
+
+                <button id="changeColor10" onclick="appendToResult(7)">7</button>
+                <button id="changeColor11" onclick="appendToResult(8)">8</button>
+                <button id="changeColor12" onclick="appendToResult(9)">9</button>
+                <button onclick="appendToResult('*')">x</button>
+
+                <button id="changeColor13" onclick="appendToResult(4)">4</button>
+                <button id="changeColor14" onclick="appendToResult(5)">5</button>
+                <button id="changeColor15" onclick="appendToResult(6)">6</button>
+                <button onclick="appendToResult('-')">-</button>
+
+                <button id="changeColor16" onclick="appendToResult(1)">1</button>
+                <button id="changeColor17" onclick="appendToResult(2)">2</button>
+                <button id="changeColor18" onclick="appendToResult(3)">3</button>
+                <button onclick="appendToResult('+')">+</button>
+
+                <button id="changeColor19" onclick="calculateSquareRoot()">√</button>
+                <button id="changeColor20" onclick="appendToResult(0)">0</button>
+                <button id="changeColor21" onclick="appendToResult('.')">.</button>
+                <button onclick="calculateResult()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
